@@ -14,12 +14,12 @@ Acompanhado pela professora Carolina.
 
 - Site Maven repository: https://mvnrepository.com/ para baixar as dependências pom.xml:
 
-  - JUnit - jupiter
+  - JUnit - jupiter - version: 5.9.1
 
-  - Rest-Assured: versão 5.3.0 :
+  - Rest-Assured - versão 5.3.0 :
     - Json Schema Validator
     - Json Path
-    - Java Faker
+    - Java Faker - version 1.0.2
   
 - Maven versão 4.0.0
 
