@@ -8,8 +8,8 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.*;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.isA;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.Matchers.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) //setar a ordem dos testes
 public class UserTests {
@@ -38,7 +38,7 @@ public class UserTests {
                 .contentType(ContentType.JSON);
     }
 
-    //primeiro teste
+    //primeiro teste - POST
     @Test
     public void CreateNewUser_WithValidData_ReturnOk(){ //sempre colocar bem especificado o que o teste irá fazer e retorna
         request.body(user)
@@ -50,5 +50,22 @@ public class UserTests {
                 .body("type", equalTo("unknown"))
                 .body("message", isA(String.class))
                 .body("size()", equalTo(3));
+    }
+
+    //Primeiro teste - GET
+    @Test
+    public void GetLogin_validUser_ReturnOk(){
+        request
+                .param("username", user.getUsername())
+                .param("password", user.getPassword())
+                .when()
+                .get("/user/login")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .and()
+                .time(lessThan(2000L))
+                .and()
+                .body(matchesJsonSchemaInClasspath("loginResponseSchema.json")); //passando o caminho da schema, setado em um arquivo de configuração json
     }
 }
