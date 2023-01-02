@@ -28,3 +28,8 @@ Acompanhado pela professora Carolina Louzada.
 - Maven versão 4.0.0
 
 - GitHub
+
+- Endpoints:
+  - getAllBookingsById_returnOk - Obtém todas as reservas por id e retorna status code 200 OK;
+  - getAllBookingsByUserFirstName_BookingExists_returnOk - Obtém reserva pelo primeiro nome do usuário (passando como parâmetro firstname=Juce), e retorna status code 200 OK;
+  - CreateBooking_WithValidData_returnOk - Cria reserva com dados válidos e retorna status code 200 OK;

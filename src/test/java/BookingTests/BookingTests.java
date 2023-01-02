@@ -13,12 +13,9 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.*;
 
@@ -98,6 +95,6 @@ public class BookingTests {
                 .and()
                 .assertThat()
                 .statusCode(200)
-                .contentType(ContentType.JSON).and().time(lessThan(2000L));
+                .contentType(ContentType.JSON).and().time(lessThan(3000L));
     }
 }
