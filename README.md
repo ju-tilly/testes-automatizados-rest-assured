@@ -4,7 +4,7 @@ Testes Automatizados com Rest Assured - Desenvolvidos junto com o Bootcamp QA GF
 
 No curso de: Testes de API: Dos Manuais aos Automatizados da Dio_me.
 
-Acompanhado pela professora Carolina.
+Acompanhado pela professora Carolina Louzada.
 
 ## ***Ferramentas e extensões utilizadas***:
 

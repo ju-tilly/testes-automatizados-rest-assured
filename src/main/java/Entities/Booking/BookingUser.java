@@ -1,19 +1,18 @@
-package Entities;
+package Entities.Booking;
 
-public class User {
+public class BookingUser {
 
-    //No swagger Petstore em Models > user > tem os atributos necessários da classe
     private String username;
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String email;
     private String password;
     private String phone;
 
-    public User(String username, String firstName, String lastName, String email, String password, String phone) {
+    public BookingUser(String username, String firstname, String lastname, String email, String password, String phone) {
         this.username = username;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
         this.password = password;
         this.phone = phone;
@@ -27,20 +26,20 @@ public class User {
         this.username = username;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {

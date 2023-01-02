@@ -1,6 +1,6 @@
-package User;
+package PetStoreTests;
 
-import Entities.User;
+import Entities.PetStore.User;
 import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
